@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>crud operations</title>
+	<link rel="stylesheet" type="text/css" href="design.css">
+	<link rel="stylesheet" type="text/css" href="Bs\css\bootstrap.min.css">
+	<script src="Bs\js\bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<!-- <link rel="stylesheet" href="jquery.datetimepicker.css"> -->
+	<script src="jquery.js"></script>
+	<!-- <script src="jquery.datetimepicker.js"></script> -->
+	<link rel="stylesheet" href="Bs\font-awesome-4.7.0\css\font-awesome.min.css">
+</head>
+<body>
+	<div class="md-form form-sm">
+  <input type="text" id="inputSMEx" class="form-control form-control-sm">
+  <label for="inputSMEx">Small input</label>
+</div><form action="" class="main-form" id="form" onsubmit="return validation()">
+<input class="form-control form-control-sm" type="text" placeholder="Small input">
+		<nav class="navbar navbar-dark bg-primary"><center>
+			jQuery Dynamic Crud Operations For Student Data</nav><br>
+				<label for="name" class="control-label col-sm-2">Enter  Student Name</label>
+				<input type="text" name="name" class="form-control input-sm" id="name" placeholder="Student Name" required="" ><span id="name" class="text-danger font-weight-bold"> </span>
+				<label for="sem" class="control-label col-sm-2">Select Semester</label>
+					<select class="form-control input-sm" name="sem" id="sem" >
+					<option value="3rdsem">3rd SEM</option>
+					<option value="4thsem">4th SEM</option>
+					<option value="5thsem">5th SEM</option>
+					<option value="6thsem">6th SEM</option>
+				</select>
+			<label>Date And Time</label><br>
+			<input type="date" id="date" name="date" required=""><br><br>
+				<label> Select Subject</label><br>
+					<input type="checkbox"  class="form-check-input"  name="checkbox1" id="check1" value="JAVA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JAVA
+					<input type="checkbox"  class="form-check-input" name="checkbox2" id="check2" value="OS">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OS<br><br>
+					<input type="checkbox"  class="form-check-input" name="checkbox3" id="check3" value="C"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C</label>
+					<input type="checkbox"  class="form-check-input" name="checkbox4" id="check4" value="PYTHON"><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PYTHON</label><br>      
+        <br/><br>
+        <button type="submit" id="save" class="btn btn-success save-btn"><i class="fa fa-arrow-right"></i>Save</button>
+
+        <br><br>
+    </form>
+    <input id="search" type="text" placeholder="Search.."><br>
+  		<table class="table table-bordered data-table" id="table" name="table">
+    		<thead>
+		      <th>NAME</th>
+		      <th>SEMSTER</th>
+		      <th>SUBJECT</th>
+		      <th>DATE</th>
+		      <th width="200px">ACTION</th>
+		    </thead>
+    		<tbody>
+    
+   			</tbody>
+  		</table>
+  			 <button  id="view" class="btn btn-info btn-xs btn-edit">view Table</button>
+  			<button  id="show" class="btn btn-info btn-xs btn-edit">Add  Record</button></center>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript">
+	
+		function validation(){
+			var name = document.getElementById('name').value;
+			if(name == ""){
+				document.getElementById('name').innerHTML =" ** Please fill the Studentname field";
+				return false;
+			}
+			if((name.length <= 2) || (nme.length > 40)) {
+				document.getElementById('name').innerHTML =" ** Studentname lenght must be between 2 and 40";
+				return false;	
+			}
+			if(!isNaN(name)){
+				document.getElementById('name').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+		}
+</script>
+<script>
+
+	<script>
+		$(document).ready(function()
+		{
+			$(window).on('load',function()
+			{
+				$('#status').fadeOut(3000);
+				$('#body').fadeOut(5000);
+			});
+		});
+	</script>
+$("#datetime").datetimepicker();
+</script>
+</body>
+</html>

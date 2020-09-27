@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="Bs\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="design.css">
+	<script src="Bs\js\bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.js"></script>
+	<script src="jquery.js"></script>
+	<link rel="stylesheet" href="Bs\font-awesome-4.7.0\css\font-awesome.min.css">
+	<style type="text/css">
+		body{
+			height: 100%
+			background-position:center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+	</style>
+</head>
+<body background="bg-image.png"  width="100%">
+	<h5><center><b>ORDER ON PRODUCT WITH REPORTS</b></center></h5>
+	<div class="container" id="container">
+		<form action="" method="" id="form1">
+		<div class="col-sm-10" id="box">
+			<div class="row form-row">
+				<div class="col-sm-6"> Product Code
+					<select class="form-control" name="pcode" id="pcode">
+						<option id="list" value="">---Select Down list---</option>
+						<option value=""></option>
+
+						<option value="PRO-001">PRO-001</option>
+						<option value="PRO-002">PRO-002</option>
+						<option value="PRO-003">PRO-003</option>
+						<option value="PRO-004">PRO-004</option>
+					</select><div id="er1"></div>
+				</div>
+				<div class="col-sm-6"> Product Name :
+					<input type="text" name="name" id="name" placeholder="Ex:LAPTOP" class="form-control" >
+					<div id="er2"></div>
+				</div></div><br>
+				<div class="row form-row">
+					<div class="col-sm-6">Start Date : 
+						<input type="date" name="date" id="date" placeholder="Ex:10/08/2025" class="form-control" >
+						<div id="er3"></div>
+					</div>
+					<div class="col-sm-6"> Product Price : 
+						<input type="text" name="price" id="price" placeholder="Ex : 1000" class="form-control"  onkeypress=" isInputNumber(event)"> 
+						<div id="er4"></div>
+					</div>
+				</div><br>
+				<div class="row form-row">
+					<div class="col-sm-6">Product Description : 
+						<textarea name="description" id="description" placeholder="Comments" class="form-control" ></textarea><div id="er5"></div>
+					</div> 
+					<div class="col-sm-6">Product With :
+						<input type="checkbox"  class="form-check-input"  name="checkbox1" id="check1" value="Accessries">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessries
+						<input type="checkbox"  class="form-check-input"  name="checkbox2" id="check2" value="Catalog">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Catalog<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"  class="form-check-input"  name="checkbox3" id="check3" value="Delivery">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delivery&nbsp;&nbsp;&nbsp;
+						<input type="checkbox"  class="form-check-input"  name="checkbox1" id="check4" value="Return Policy`">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return Policy<div id="er6"></div>
+					</div>
+				</div><br>
+				  <button type="submit" id="save" class="btn btn-success save-btn"><i class="fa fa-plus-square fa-3" aria-hidden="true"></i>&nbsp;&nbsp; Save &nbsp;</button>
+				</form>
+			</div>
+		</div>	
+	
+	</div>			
+	<div id="update1">
+				  	
+	</div>
+	<div id="tableform" class="form-control">
+		<div class="row form-row float-right">
+			<div class="col-sm-18">
+				<input type="text" name="Search" placeholder="Min 2 char to Search" id="search" class="form-control">
+			</div>
+		</div>
+		<table class="table table-bordered data-table" id="table" name="table"><thead>
+		      <th>PRODUCT CODE</th>
+		      <th>PRODUCT NAME</th>
+		      <th>DATE AND TIME</th>
+		      <th>PRICE</th>
+		      <th>DESCRIPTION</th>
+		      <th>PRODUCT WITH</th>
+		      <th width="260px">ACTION</th>
+		    </thead>
+    		<tbody>
+   			</tbody>
+		</table>
+		<div id="Create_product">
+			<button id="Create" class="btn btn-dark" ><i class="fa fa-share fa-3" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Create Product</button>
+	</div>
+	</div>
+	
+	<script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html> 

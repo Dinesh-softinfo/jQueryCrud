@@ -1,0 +1,58 @@
+
+.container{
+	margin: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	align-self: center;
+}
+#box{
+	box-shadow: 0 0 20px 0 rgba(72,94,116,0,7);
+}
+input[type=date]
+{
+height: 60%;
+width: 100%;
+border:1 solid black;
+border-radius: 5px;
+}
+
+input[type=checkbox]{
+	margin-left: 40px;
+
+}
+textarea[name=description]{
+	resize: none;
+}
+input[type=text],select[name=p-code]:focus {
+  border: 1px solid #555;
+}
+#table{
+
+}
+@media(max-width:500px ){
+	#table thead{
+		display: none;
+	}
+	#table,#table tbody,#table tr,#table td{
+		display: block;
+		width: 100%;
+	}
+	#table tr{
+		margin-bottom: 15px;
+	}
+	#table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	#table td::before{
+		position: absolute;
+		left: 0;
+		width: 50%;
+		padding-left: 15px;
+		font-size: 15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
